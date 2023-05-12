@@ -26,7 +26,7 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin({
       HOST: "localhost",
-      PORT: "3000",
+      PORT: "8080",
     }),
   ],
   devtool: 'source-map',
