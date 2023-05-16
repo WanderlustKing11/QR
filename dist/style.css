@@ -1,7 +1,13 @@
 /* //////////////////////////////////////// */
 /* Don't forget!!!
 Delete all excess font styles */
+/* From here and the files in the local fonts folder */
 /* //////////////////////////////////////// */
+
+/*====================
+        FONTS
+======================*/
+
 @font-face {
   font-family: 'Roboto';
   src: url('../src/fonts/roboto/Roboto-Thin.ttf') format('truetype'),
@@ -19,20 +25,41 @@ Delete all excess font styles */
   font-weight: 300, 400, 500, 700;
 }
 
+/*====================
+        APP
+======================*/
+
 body {
   background-color: hsl(194, 100%, 50%);
-  font-family: 'Quicksand', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-h1 {
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
+/*====================
+        HEADER
+======================*/
+
+
+
+.MuiAppBar-root {
+  position: 'fixed';
+  background-color: #2f2f2f;
+  box-shadow: 'none';
+  padding: '10px 0px';
 }
 
-h2 {
-  color: hsl(150, 100%, 50%);
+header {
+  padding: 10px 0px;
+  transition: all 300ms ease-in;
+  background-color: hsl(0, 0%, 0%);
 }
 
-li:not(:last-child) {
-  text-decoration: line-through;
+header .header_st {
+  color:#fff;
 }
+
+/* header .header_logo {
+  flex-grow: 1;
+} */
+
+/*====================
+        NAVBAR
+======================*/
