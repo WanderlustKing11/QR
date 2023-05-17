@@ -11,7 +11,7 @@ server.set('view engine', 'ejs');
 
 server.use('/', (req, res) => {
     res.render('index', {
-      content: "Sending this <em>data</em> via <strong>EJS</strong>",
+      content: "<strong>Loading...</strong>",
     });
 });
 

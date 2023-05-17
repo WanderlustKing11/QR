@@ -1,8 +1,8 @@
 import React from 'react';
 
 import {AppBar, Toolbar, IconButton} from '@mui/material';
-import FacebookSharpIcon from '@mui/icons-material/FacebookSharp';
-import PhoneSharpIcon from '@mui/icons-material/PhoneSharp';
+import { FacebookSharp, PhoneSharp, Instagram, MailOutline } from '@mui/icons-material/';
+import '../../dist/styles.css'
 
 const Header = () => {
   return (
@@ -15,14 +15,20 @@ const Header = () => {
         <div className='header_social'>
           {/* Icon Button requires these attributes */}
           <IconButton aria-label='Menu' color='inherit'>
-            <FacebookSharpIcon />
+            <FacebookSharp />
+          </IconButton>
+          <IconButton aria-label='Menu' color='inherit'>
+            <Instagram />
+          </IconButton>
+          <IconButton aria-label='Menu' color='inherit'>
+            <MailOutline />
           </IconButton>
         </div>
         <div className='header_phone'>
-        <IconButton aria-label='Menu' color='inherit'>
-            <PhoneSharpIcon />
+          <IconButton aria-label='Menu' color='inherit'>
+            <PhoneSharp />
           </IconButton>
-          (908) 999-1234
+          <a href="tel:+9733720220">(973) 372-0220</a>
         </div>
         
       </Toolbar>
