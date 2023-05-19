@@ -10,27 +10,27 @@ Delete all excess font styles */
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../src/fonts/roboto/Roboto-Thin.ttf') format('truetype'),
-       url('../src/fonts/roboto/Roboto-Medium.ttf') format('truetype'),
-       url('../src/fonts/roboto/Roboto-Black.ttf') format('truetype');
+  src: url('./fonts/roboto/Roboto-Thin.ttf') format('truetype'),
+       url('./fonts/roboto/Roboto-Medium.ttf') format('truetype'),
+       url('./fonts/roboto/Roboto-Black.ttf') format('truetype');
   font-weight: 100, 500, 900;
 }
 
 @font-face {
   font-family: 'Quicksand';
-  src: url('../src/fonts/quicksand/Quicksand-Light.ttf') format('truetype'),
-       url('../src/fonts/quicksand/Quicksand-Regular.ttf') format('truetype'),
-       url('../src/fonts/quicksand/Quicksand-Medium.ttf') format('truetype'),
-       url('../src/fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
+  src: url('./fonts/quicksand/Quicksand-Light.ttf') format('truetype'),
+       url('./fonts/quicksand/Quicksand-Regular.ttf') format('truetype'),
+       url('./fonts/quicksand/Quicksand-Medium.ttf') format('truetype'),
+       url('./fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
   font-weight: 300, 400, 500, 700;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../src/fonts/montserrat/Montserrat-Light.ttf') format('truetype'),
-       url('../src/fonts/montserrat/Montserrat-Medium.ttf') format('truetype'),
-       url('../src/fonts/montserrat/Montserrat-Bold.ttf') format('truetype'),
-       url('../src/fonts/montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+  src: url('./fonts/montserrat/Montserrat-Light.ttf') format('truetype'),
+       url('./fonts/montserrat/Montserrat-Medium.ttf') format('truetype'),
+       url('./fonts/montserrat/Montserrat-Bold.ttf') format('truetype'),
+       url('./fonts/montserrat/Montserrat-ExtraBold.ttf') format('truetype');
   font-weight: 300, 500, 700, 800;
 }
 
@@ -39,6 +39,7 @@ Delete all excess font styles */
 ======================*/
 :root {
   --primary: hsl(0, 0%, 100%);
+  --gift: hsl(61, 75%, 59%);
 }
 
 body {
@@ -54,10 +55,10 @@ header {
 }
 
 header.MuiAppBar-root {
-  position:fixed;
+  position: fixed;
   background-color: hsl(0, 0%, 0%);
   color: var(--primary);
-  box-shadow:none;
+  box-shadow: none;
   padding: 0px;
 }
 
@@ -68,7 +69,7 @@ header .MuiToolbar-root {
 }
 
 header .header_st {
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-grow: 3;
 }
@@ -84,13 +85,26 @@ header .header_phone {
   justify-content: flex-start;
   flex-grow: 1;
   align-items: center;
+  font-size: 1rem;
 }
 
-.header_phone a {
-  color:  var(--primary);
+.header_social .MuiIconButton-root,
+.header_phone .MuiIconButton-root {  
+  color: var(--primary);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
+
+.header_social:hover .MuiIconButton-root:not(:hover),
+.header_phone:hover .MuiIconButton-root:not(:hover) {
+  color: rgb(30, 30, 30);
+}
+
+/* .header_social a:hover, .header_phone a:hover {
+  color: red;
+} */
 /* @media (min-width: ) */
 
 /*====================
