@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import {AppBar, Toolbar, IconButton } from '@mui/material';
-import { FacebookSharp, PhoneSharp, Instagram, MailOutline } from '@mui/icons-material';
+import { FacebookSharp, PhoneSharp, Instagram, MailOutline, Menu } from '@mui/icons-material';
 
 
 const Header = () => {
@@ -67,6 +67,15 @@ const Header = () => {
           </IconButton>
         </div>
         
+      </Toolbar>
+      <Toolbar>
+        <div className='header_logo'>
+          <img src="../resources/images/Logo1.png" alt="Quality Refrigeration logo" />
+        </div>
+        {/* Icon Button requires these attributes */}
+        <IconButton aria-label='Menu' color='inherit'>
+          <Menu />
+        </IconButton>
       </Toolbar>
     </AppBar>
     

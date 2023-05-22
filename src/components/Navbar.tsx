@@ -8,7 +8,9 @@ const Navbar = () => {
 
     <AppBar>
       <Toolbar>
-        <div className='header_logo'></div>
+        <div className='header_logo'>
+          <img src="../resources/images/Logo1.png" alt="Quality Refrigeration logo" />
+        </div>
         {/* Icon Button requires these attributes */}
         <IconButton aria-label='Menu' color='inherit'>
           <MenuIcon />
