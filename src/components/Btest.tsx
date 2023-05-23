@@ -11,13 +11,36 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import Logo from '../resources/images/Logo1.png';
-import TestImg from '../resources/images/Rick-Mind-Wipe.jpg';
+import AdbIcon from '@mui/icons-material/Adb';
+import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
+import { blue, cyan } from '@mui/material/colors';
 
-const pages = ['home', 'about us', 'services', 'projects', 'contact us'];
+const pageTheme = createTheme({
+  palette: {
+    primary: {
+      main: blue[800],
+    },
+    secondary: {
+        main: cyan['100'],
+    },
+  },
+});
+
+const StyledButton = styled(Button)`
+  ${({ theme }) => `
+  transition: ${theme.transitions.create(['background-color', 'transform'], {
+    duration: theme.transitions.duration.standard,
+  })};
+  &:hover {
+    background-color: ${theme.palette.secondary.main};
+  }
+  `}
+`;
+
+const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function HeadTest() {
+function Btest() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -37,27 +60,29 @@ function HeadTest() {
   };
 
   return (
-    <AppBar position='static' color='inherit'>
-      <Container maxWidth='xl'>
+    <AppBar position="static" color="inherit">
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box
-            sx={{ 
+          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
               display: { xs: 'none', md: 'flex' },
-              alignItems: 'center', 
-              mr: 1, 
-              flexShrink: 0 
-            }}            
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'primary',
+              textDecoration: 'none',
+            }}
           >
-            <img 
-              src={Logo}
-              alt='Quality Refrigeration logo'
-              style={{
-                maxHeight: '50px',
-                width: 'auto',
-              }}
-            />
-          </Box>
+            LOGO
+          </Typography>
 
+          {/* Menu Button */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -65,7 +90,7 @@ function HeadTest() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color='default'
             >
               <MenuIcon />
             </IconButton>
@@ -94,24 +119,49 @@ function HeadTest() {
               ))}
             </Menu>
           </Box>
-          
+          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'primary',
+              textDecoration: 'none',
+            }}
+          >
+            LOGO
+          </Typography>
+
           {/* Navbar Links */}
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
+            <ThemeProvider theme={pageTheme} key={page}>
+              <StyledButton >
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'primary', display: 'block' }}
+                sx={{ my: 2, display: 'block' }}
               >
                 {page}
               </Button>
+              </StyledButton>
+              </ThemeProvider>
             ))}
           </Box>
+          
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Rick Sanchez" src={TestImg} />
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -142,4 +192,4 @@ function HeadTest() {
     </AppBar>
   );
 }
-export default HeadTest;
+export default Btest;
