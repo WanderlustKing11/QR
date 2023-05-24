@@ -114,11 +114,37 @@ header .header_phone {
         NAVBAR
 ======================*/
 
+.logo-img {
+  max-height: 50px;
+  width: auto;
+}
+
 /*====================
-        Features
+        Featured
 ======================*/
 
-.wrapper {
+.carousel_wrapper {
+  background-color: hsl(182, 74%, 50%); 
+  display: flex;
+  justify-content: center;
+}
+
+/* .carousel_wrapper div {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .f_slide {
+
+} */
+
+/*====================
+        Services
+======================*/
+
+.services_wrapper {
   background-color: hsl(288, 44%, 58%);
   height: 450px;
   width: 100%;
