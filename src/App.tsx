@@ -19,8 +19,10 @@ const App: React.FC = () => {
           <Navbar />
 
           {/* Featured Section */}
-          <Featured />
-
+          <>
+            <Featured />
+          </>
+          
           {/* <div style={{
             backgroundColor: 'hsl(195, 74%, 50%)', 
             height:'450px', 

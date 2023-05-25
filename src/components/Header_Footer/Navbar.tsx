@@ -150,14 +150,12 @@ function Navbar(props: Props) {
             }}>
             {pages.map((page) => (
             <ThemeProvider theme={pageTheme} key={page}>
-              <StyledButton >
-              <Button
+              <StyledButton 
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, display: 'block' }}
               >
                 {page}
-              </Button>
               </StyledButton>
               </ThemeProvider>
             ))}

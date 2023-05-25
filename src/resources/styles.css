@@ -122,11 +122,19 @@ header .header_phone {
 /*====================
         Featured
 ======================*/
+.featured_container {
+  position: relative;
+}
 
 .carousel_wrapper {
-  background-color: hsl(182, 74%, 50%); 
   display: flex;
   justify-content: center;
+  /* height: 450px; */
+  overflow: hidden;
+}
+
+.carousel_img {
+  background-size: cover !important;
 }
 
 /* .carousel_wrapper div {
