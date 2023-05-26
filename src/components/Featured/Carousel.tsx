@@ -1,73 +1,80 @@
 import React from 'react';
 
-import Container from '@mui/material/Container';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img_1 from '../../resources/images/DJI_0222.jpg';
+// import img_1 from '../../resources/images/DJI_0222.jpg';
 import img_2 from '../../resources/images/DJI_0270.jpg';
-import img_3 from '../../resources/images/qimg-04.jpeg';
-import img_4 from '../../resources/images/qimg-07.jpeg';
+// import img_3 from '../../resources/images/qimg-04.jpeg';
+// import img_4 from '../../resources/images/qimg-07.jpeg';
+import istock_1 from '../../resources/images/istock_1.jpg';
+import istock_2 from '../../resources/images/istock_2.jpg';
+import istock_3 from '../../resources/images/istock_3.jpg';
 
 const Carousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
-    autoplaySpeed: 3000,
+    autoplay: false, // !!Set false in development, but true in production!!
+    fade: true, 
+    speed: 1500,
+    autoplaySpeed: 5000,
+    arrows: false,
+    // pauseOnHover: false,
+    // swipe: false,
+    // touchMove: false,
+    // draggable: false,
   };
 
   return (
     <div>
-      <Container
+      <Slider 
+        {...settings}
         className='carousel_wrapper'
-        sx={{
-          height: '450px',
-          // height: { xs:`${window.innerHeight}`, md: '450px', xl: '450px' },
-          width: '100%',
-        }}
       >
-        <Slider {...settings}>
-          <div>
-            <div
-              className='carousel_img'
-              style={{
-                background: `url(${img_1})`,
-                height: '450px',
-              }}
-            ></div>
-          </div>
-          <div>
+        <div>
           <div
-              className='carousel_img'
-              style={{
-                background: `url(${img_2})`,
-                height: '450px',
-              }}
-            ></div>
-          </div>
-          <div>
+            className='carousel_img'
+            style={{
+              background: `url(${istock_1})`,
+              height: '450px',
+              backgroundPositionY: '-10rem',
+            }}
+          ></div>
+        </div>
+        <div>
           <div
-              className='carousel_img'
-              style={{
-                background: `url(${img_3})`,
-                height: '450px',
-              }}
-            ></div>
-          </div>
-          <div>
+            className='carousel_img'
+            style={{
+              background: `url(${istock_2})`,
+              height: '450px',
+              backgroundPositionY: '-13rem',
+            }}
+          ></div>
+        </div>
+        <div>
           <div
-              className='carousel_img'
-              style={{
-                background: `url(${img_4})`,
-                height: '450px',
-              }}
-            ></div>
-          </div>
-        </Slider>
-      </Container>
+            className='carousel_img'
+            style={{
+              background: `url(${istock_3})`,
+              height: '450px',
+              backgroundPositionY: '-8rem',
+            }}
+          ></div>
+        </div>
+        <div>
+          <div
+            className='carousel_img'
+            style={{
+              background: `url(${img_2})`,
+              height: '450px',
+              backgroundPositionY: '-9rem',
+            }}
+          ></div>
+        </div>
+      </Slider>
     </div>
-  )
-}
+  );
+};
 
 export default Carousel;

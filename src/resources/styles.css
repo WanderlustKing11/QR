@@ -124,29 +124,40 @@ header .header_phone {
 ======================*/
 .featured_container {
   position: relative;
+  height: 450px;
 }
 
-.carousel_wrapper {
-  display: flex;
-  justify-content: center;
-  /* height: 450px; */
-  overflow: hidden;
-}
+
 
 .carousel_img {
   background-size: cover !important;
 }
 
-/* .carousel_wrapper div {
-  color: white;
+/*====================
+        Customers
+======================*/
+
+.customers_wrapper {
+  height: 7rem;
+  width: 100%;
+  background-color:		hsl(0, 0%, 18%);
   display: flex;
-  justify-content: center;
+  flex-flow: row;
+  justify-content: space-evenly;
   align-items: center;
-} */
+}
 
-/* .f_slide {
+.customers_wrapper div {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
 
-} */
+.customers_logo {
+  display: flex;
+  flex: 1;
+  max-width: 50%;
+}
 
 /*====================
         Services
