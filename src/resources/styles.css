@@ -39,7 +39,7 @@ Delete all excess font styles */
 ======================*/
 :root {
   --primary: hsl(0, 0%, 100%);
-  --gift: hsl(61, 75%, 59%);
+  --gift: hsl(52, 100%, 50%);
 }
 
 body {
@@ -127,8 +127,6 @@ header .header_phone {
   height: 450px;
 }
 
-
-
 .carousel_img {
   background-size: cover !important;
 }
@@ -160,6 +158,43 @@ header .header_phone {
 }
 
 /*====================
+        Parallax
+======================*/
+
+.top-layer {
+  position: relative;
+  z-index: 5;
+}
+
+.prlx-layer {
+  position: fixed;
+  z-index: -2;
+}
+
+.bottom-layer {
+  position: relative;
+  z-index: 5;
+}
+
+/* .prlx_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+} */
+
+.prlx_img {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  /* background-position-y: -20rem; */
+  filter: brightness(50%);
+}
+
+/*====================
         Services
 ======================*/
 
@@ -168,15 +203,14 @@ header .header_phone {
   height: 450px;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   border-top: 5px solid black;
   border-bottom: 5px solid black;
 }
 
-.wrapper > * {
+.feature {
   display: flex;
-  flex: 1 100%;
-  height: 450px;
+  flex: 1 50%;
   justify-content: center;
   align-items: center;
 }

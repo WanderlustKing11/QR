@@ -2,9 +2,12 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <>
-      footer
-    </>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center'
+      }}
+    ><h1>Footer</h1></div>
   )
 }
 

@@ -7,20 +7,20 @@ import 'slick-carousel/slick/slick-theme.css';
 import img_2 from '../../resources/images/DJI_0270.jpg';
 // import img_3 from '../../resources/images/qimg-04.jpeg';
 // import img_4 from '../../resources/images/qimg-07.jpeg';
-import istock_1 from '../../resources/images/istock_1.jpg';
-import istock_2 from '../../resources/images/istock_2.jpg';
-import istock_3 from '../../resources/images/istock_3.jpg';
+import istock_1 from '../../resources/images/istock_01.jpg';
+import istock_2 from '../../resources/images/istock_02.jpg';
+import istock_3 from '../../resources/images/istock_03.jpg';
 
 const Carousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    autoplay: false, // !!Set false in development, but true in production!!
+    autoplay: true, // !!Set false in development, but true in production!!
     fade: true, 
     speed: 1500,
     autoplaySpeed: 5000,
     arrows: false,
-    // pauseOnHover: false,
+    pauseOnHover: false,
     // swipe: false,
     // touchMove: false,
     // draggable: false,

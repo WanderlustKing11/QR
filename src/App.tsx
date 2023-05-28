@@ -5,73 +5,73 @@ import Footer from './components/Header_Footer/Footer';
 import Navbar from './components/Header_Footer/Navbar';
 import Featured from './components/Featured/index';
 import Customers from './components/Customers/Customers';
+import PageBreak_1 from './components/PageBreak/PageBreak1';
 
 import CssBaseline from '@mui/material/CssBaseline';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 const App: React.FC = () => {
   return (
     <div className='App'>
       <React.Fragment>
         <CssBaseline>
-          {/* <Header /> */}
-          <Navbar />
+          <Parallax pages={3}>
 
-          {/* Featured Section */}
-          <Featured />
-
-          {/* Customers Section */}
-          <Customers />
-
-          {/* <div style={{
-            backgroundColor: 'hsl(195, 74%, 50%)', 
-            height:'450px', 
-            width:'100%', 
-            display: 'flex'
-          }}>
-            <h1 style={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              flexGrow: 1}}>
-                Carousel
-            </h1>
-          </div> */}
-
-          {/* Parallax Section */}
-          <div
-            style={{
-              backgroundColor: 'hsl(200, 100%, 70%)',
-              height: '450px',
-              width: '100%',
-              display: 'flex',
-            }}
-          >
-            <h1
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                flexGrow: 1,
-              }}
+            <ParallaxLayer
+              className='prlx-layer'
+              sticky={{ start: 0, end: 1 }}
+              offset={0.3}
+              speed={0}
             >
-              Parallax
-            </h1>
-          </div>
+              {/* Parallax Section */}
+              <PageBreak_1 />
+            </ParallaxLayer>
 
-          {/* Flex Box Features */}
-          <div className='services_wrapper'>
-            <div className='feature-1'>1</div>
-            <div className='feature-2'>2</div>
-          </div>
-          <div className='wrapper'>
-            <div className='feature-3'>3</div>
-            <div className='feature-4'>4</div>
-          </div>
-          <div
-            style={{ backgroundColor: 'hsl(67, 100%, 80%)', height: '600px' }}
-          ></div>
+            <ParallaxLayer
+              className='top-layer'
+              offset={0}
+              speed={1}
+              factor={3}
+            >
+              {/* <Header /> */}
+              <Navbar />
 
-          <Footer />
+              {/* Carousel Section */}
+              <Featured />
+
+              {/* Customers' logos Section */}
+              <Customers />
+            </ParallaxLayer>
+
+            <ParallaxLayer
+              className='bottom-layer'
+              offset={1}
+              speed={1}
+              factor={1}
+            >
+              {/* Flex Box Features */}
+              <div className='services_wrapper'>
+                <div className='feature feature-1'>1</div>
+                <div className='feature feature-2'>2</div>
+              </div>
+              <div className='services_wrapper'>
+                <div className='feature feature-3'>3</div>
+                <div className='feature feature-4'>4</div>
+              </div>
+
+              {/* New Section */}
+              <div
+                style={{
+                  backgroundColor: 'hsl(67, 100%, 80%)',
+                  height: '600px',
+                }}
+              ></div>
+
+              {/* Footer */}
+              <Footer />
+            </ParallaxLayer>
+
+          </Parallax>
         </CssBaseline>
       </React.Fragment>
     </div>
