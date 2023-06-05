@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import { blue, cyan } from '@mui/material/colors';
+import { cyan, blue } from '@mui/material/colors';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 
@@ -30,7 +30,12 @@ const pageTheme = createTheme({
       main: blue[800],
     },
     secondary: {
-        main: cyan['100'],
+        main: cyan[50],
+    },
+  },
+  typography: {
+    button: {
+      fontWeight: '700',
     },
   },
 });
@@ -40,6 +45,7 @@ const StyledButton = styled(Button)`
   transition: ${theme.transitions.create(['background-color', 'transform'], {
     duration: theme.transitions.duration.standard,
   })};
+
   &:hover {
     background-color: ${theme.palette.secondary.main};
   }
@@ -101,7 +107,8 @@ function Navbar(props: Props) {
             sx={{ 
               flexGrow: 1, 
               display: { xs: 'flex', md: 'none' },
-              justifyContent: 'flex-end' 
+              justifyContent: 'flex-end',
+               
             }}>
             <IconButton
               size="large"
@@ -146,14 +153,21 @@ function Navbar(props: Props) {
             sx={{ 
               flexGrow: 1, 
               display: { xs: 'none', md: 'flex' },
-              justifyContent: 'flex-end' 
+              justifyContent: 'flex-end',
+              '&hover': {
+                backgroundColor: 'secondary',
+              }, 
             }}>
             {pages.map((page) => (
             <ThemeProvider theme={pageTheme} key={page}>
               <StyledButton 
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, display: 'block' }}
+                sx={{ 
+                  my: 2, 
+                  display: 'block',
+                  margin: 'auto 1rem',
+                 }}
               >
                 {page}
               </StyledButton>

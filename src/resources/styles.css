@@ -34,6 +34,22 @@ Delete all excess font styles */
   font-weight: 300, 500, 700, 800;
 }
 
+@font-face {
+  font-family: 'Fira';
+  src: url('./fonts/fira/FiraSans-Light.ttf') format('truetype'),
+       url('./fonts/fira/FiraSans-Regular.ttf') format('truetype'),
+       url('./fonts/fira/FiraSans-ExtraBold.ttf') format('truetype');
+  font-weight: 300, 400, 800;
+}
+
+@font-face {
+  font-family: 'Source_Sans_Pro';
+  src: url('./fonts/source_sans_pro/SourceSansPro-SemiBold.ttf') format('truetype'),
+       url('./fonts/source_sans_pro/SourceSansPro-Bold.ttf') format('truetype'),
+       url('./fonts/source_sans_pro/SourceSansPro-Black.ttf') format('truetype');
+  font-weight: 600, 700, 900;
+}
+
 /*====================
         APP
 ======================*/
@@ -129,6 +145,7 @@ header .header_phone {
 
 .carousel_img {
   background-size: cover !important;
+  height: 450px;
 }
 
 /*====================
@@ -190,8 +207,33 @@ header .header_phone {
   align-items: center;
   height: 100%;
   width: 100%;
-  /* background-position-y: -20rem; */
   filter: brightness(50%);
+  background-repeat: no-repeat;
+}
+
+.message-wrapper {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  top: 20rem;
+  left: 35%;
+  border: 2px solid #fff;
+  height: 5rem;
+  width: 30%;
+  padding: 5px;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  padding: 0 1rem;
 }
 
 /*====================
@@ -199,35 +241,44 @@ header .header_phone {
 ======================*/
 
 .services_wrapper {
-  background-color: hsl(288, 44%, 58%);
   height: 450px;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
 }
 
 .feature {
-  display: flex;
   flex: 1 50%;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
 }
 
-.feature-1 {
-  background-color: hsl(299, 89%, 71%);
+.feature-1, .feature-4 {
+  background-color: hsl(205, 56%, 35%);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5%;
+  color:#fff;
+}
+
+.feature-1 h2 {
+  font-family: 'Source_Sans_Pro';
+  font-weight: 900;
+  font-size: 2.3rem;
+}
+
+.feature-1 p {
+  font-family: 'Fira';
+  font-weight: 800;
 }
 
 .feature-2 {
-  background-color: hsl(204, 75%, 59%);
+  background-position-y: -5rem;
+  justify-content: center;
 }
 
 .feature-3 {
-  background-color: hsl(38, 75%, 59%);
-}
-
-.feature-4 {
-  background-color: hsl(108, 100%, 74%);
+  background-position-y: -12rem;
+  justify-content: center;
 }
 

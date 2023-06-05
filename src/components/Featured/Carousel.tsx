@@ -37,7 +37,7 @@ const Carousel = () => {
             className='carousel_img'
             style={{
               background: `url(${istock_1})`,
-              height: '450px',
+              // height: '450px',
               backgroundPositionY: '-10rem',
             }}
           ></div>
@@ -47,7 +47,7 @@ const Carousel = () => {
             className='carousel_img'
             style={{
               background: `url(${istock_2})`,
-              height: '450px',
+              // height: '450px',
               backgroundPositionY: '-13rem',
             }}
           ></div>
@@ -57,7 +57,7 @@ const Carousel = () => {
             className='carousel_img'
             style={{
               background: `url(${istock_3})`,
-              height: '450px',
+              // height: '450px',
               backgroundPositionY: '-8rem',
             }}
           ></div>
@@ -67,7 +67,7 @@ const Carousel = () => {
             className='carousel_img'
             style={{
               background: `url(${img_2})`,
-              height: '450px',
+              // height: '450px',
               backgroundPositionY: '-9rem',
             }}
           ></div>
