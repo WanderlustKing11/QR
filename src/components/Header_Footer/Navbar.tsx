@@ -96,7 +96,7 @@ function Navbar(props: Props) {
     1 as the navbar
     All as part of the Header */}
 
-      <Container maxWidth="xl" sx={{ padding: { md: '0 10%' }}}>
+      <Container maxWidth="xl" sx={{ padding: { md: '10px 10%' }}}>
         <Toolbar disableGutters>
           
           {/* Logo */}

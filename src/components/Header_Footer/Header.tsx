@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import {AppBar, Toolbar, IconButton } from '@mui/material';
+import { IconButton } from '@mui/material';
 import { FacebookSharp, PhoneSharp, Instagram, MailOutline, Menu } from '@mui/icons-material';
 
 
@@ -17,8 +17,7 @@ const Header = () => {
 
   return (
 
-    <AppBar>
-      <Toolbar>
+    <div className='header'>
 
         <div className='header_st'>
           INDUSTRIAL REFRIGERATION EXPERTS
@@ -67,8 +66,8 @@ const Header = () => {
           </IconButton>
         </div>
         
-      </Toolbar>
-      <Toolbar>
+
+
         <div className='header_logo'>
           <img src="../resources/images/Logo1.png" alt="Quality Refrigeration logo" />
         </div>
@@ -76,8 +75,7 @@ const Header = () => {
         <IconButton aria-label='Menu' color='inherit'>
           <Menu />
         </IconButton>
-      </Toolbar>
-    </AppBar>
+      </div>
     
 
   )
