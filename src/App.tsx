@@ -3,6 +3,7 @@ import './resources/styles.css';
 // import Header from './components/Header_Footer/Header';
 import Navbar from './components/Header_Footer/Navbar';
 import Featured from './components/Featured/index';
+import Intro from './components/Intro/Intro';
 import Customers from './components/Customers/Customers';
 import PageBreak_1 from './components/PageBreak/PageBreak1';
 import Services from './components/Services/Services';
@@ -17,33 +18,28 @@ const App: React.FC = () => {
     <div className='App'>
       <React.Fragment>
         <CssBaseline>
-          {/* <Header /> */}
-
-          <Parallax pages={5}>
+          <Parallax pages={3}>
             <ParallaxLayer
               className='top-layer'
               offset={0}
               speed={1}
               factor={1}
             >
-              {/* <Header /> */}
               <Navbar />
 
-              {/* Carousel Section */}
               <Featured />
 
-              {/* Customers' logos Section */}
-              <Customers />
+              <Intro />
             </ParallaxLayer>
 
+            {/* Parallax Section 1 */}
             <ParallaxLayer
               className='prlx-layer'
-              offset={1}
+              offset={0}
               speed={0}
-              sticky={{ start: 0, end: 1 }}
+              sticky={{ start: 0, end: 0.9 }}
               factor={3}
             >
-              {/* Parallax Section */}
               <div>
                 <PageBreak_1 />
               </div>
@@ -55,33 +51,29 @@ const App: React.FC = () => {
               speed={1}
               factor={1}
             >
-              {/* Flex Box Features */}
+              <Customers />
               <Services />
             </ParallaxLayer>
 
             {/* Parallax 2 */}
-
             <ParallaxLayer
               className='prlx-layer'
               offset={1.6}
               speed={0}
-              sticky={{ start: 1.4, end: 3 }}
+              sticky={{ start: 1.4, end: 2.5 }}
               factor={1}
             >
               <PageBreak2 />
             </ParallaxLayer>
 
-          <ParallaxLayer
-            className='footer-layer'
-            offset={2}
-            speed={1}
-            factor={2}
-
-          >
-          {/* Footer */}
-          <Footer />
-          </ParallaxLayer>
-
+            <ParallaxLayer
+              className='footer-layer'
+              offset={2.7}
+              speed={1}
+              factor={2}
+            >
+              <Footer />
+            </ParallaxLayer>
           </Parallax>
         </CssBaseline>
       </React.Fragment>

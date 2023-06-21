@@ -7,9 +7,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import img_2 from '../../resources/images/DJI_0270.jpg';
 // import img_3 from '../../resources/images/qimg-04.jpeg';
 // import img_4 from '../../resources/images/qimg-07.jpeg';
-import istock_1 from '../../resources/images/istock_01.jpg';
 import istock_2 from '../../resources/images/istock_02.jpg';
 import istock_3 from '../../resources/images/istock_03.jpg';
+import dji_0222 from '../../resources/images/DJI_0222.jpg';
 
 const Carousel = () => {
   const settings = {
@@ -36,7 +36,7 @@ const Carousel = () => {
           <div
             className='carousel_img'
             style={{
-              background: `url(${istock_1})`,
+              background: `url(${istock_3})`,
               // height: '450px',
               backgroundPositionY: '-10rem',
             }}
@@ -56,7 +56,7 @@ const Carousel = () => {
           <div
             className='carousel_img'
             style={{
-              background: `url(${istock_3})`,
+              background: `url(${dji_0222})`,
               // height: '450px',
               backgroundPositionY: '-8rem',
             }}

@@ -133,13 +133,17 @@ header {
         NAVBAR
 ======================*/
 
+.MuiAppBar-root.navbar {
+  background-color: hsl(0, 0%, 9%);
+}
+
 .logo-img {
-  max-height: 50px;
+  max-height: 4rem;
   width: auto;
 }
 
 /*====================
-        Featured
+        FEATURED
 ======================*/
 .featured_container {
   position: relative;
@@ -152,11 +156,11 @@ header {
 }
 
 /*====================
-        Customers
+        INTRO
 ======================*/
 
-.customers_wrapper {
-  height: 7rem;
+.intro_wrapper {
+  height: 20rem;
   width: 100%;
   background-color:		hsl(0, 0%, 18%);
   display: flex;
@@ -165,16 +169,9 @@ header {
   align-items: center;
 }
 
-.customers_wrapper div {
+.intro_wrapper h1 {
   display: flex;
-  flex: 1;
-  justify-content: center;
-}
-
-.customers_logo {
-  display: flex;
-  flex: 1;
-  max-width: 50%;
+  color: #fff;
 }
 
 /*====================
@@ -214,6 +211,14 @@ header {
   background-repeat: no-repeat;
 }
 
+.prlx_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  z-index: 5;
+}
+
 .message-wrapper {
   display: flex;
   justify-content: center;
@@ -240,6 +245,32 @@ header {
 }
 
 /*====================
+        CUSTOMERS
+======================*/
+
+.customers_wrapper {
+  height: 10rem;
+  width: 100%;
+  background-color:		hsl(0, 0%, 18%);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.customers_wrapper div {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.customers_logo {
+  display: flex;
+  flex: 1;
+  max-width: 50%;
+}
+
+/*====================
         Services
 ======================*/
 
@@ -258,7 +289,7 @@ header {
 
 .feature-1, .feature-4 {
   /* background-color: hsl(205, 56%, 35%); */
-  background-color: hsl(0, 0%, 19%);
+  background-color: hsl(0, 0%, 9%);
   flex-direction: column;
   justify-content: flex-start;
   padding: 5%;

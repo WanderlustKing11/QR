@@ -2,7 +2,6 @@ import React from 'react';
 import istock_04 from '../../resources/images/istock_04.jpg';
 
 import { Fade } from 'react-awesome-reveal';
-// import Backdrop from '@mui/material/Backdrop';
 
 const PageBreak1 = () => {
   return (
@@ -22,6 +21,7 @@ const PageBreak1 = () => {
           <div className='message'>No project to big or small</div>
         </div>
       </Fade>
+
     </div>
     // </div>
   );

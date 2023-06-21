@@ -13,11 +13,11 @@ import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import { cyan, blue } from '@mui/material/colors';
+import { cyan, blueGrey } from '@mui/material/colors';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 
-import Logo from '../../resources/images/Logo1.png'
+import Logo from '../../resources/images/qr_logo_sm.png';
 
 interface Props {
   window?: () => Window;
@@ -27,7 +27,7 @@ interface Props {
 const pageTheme = createTheme({
   palette: {
     primary: {
-      main: blue[800],
+      main: blueGrey[400],
     },
     secondary: {
         main: cyan[50],
@@ -89,7 +89,13 @@ function Navbar(props: Props) {
 
   return (
     <HideOnScroll {...props}>
-    <AppBar position="fixed" color="inherit" >
+    <AppBar 
+      position='fixed'
+      className='navbar' 
+      // sx={{
+      //   backgroundColor: 'hsl(0, 0%, 25%)',
+      // }} 
+    >
 
     {/* Consider Splitting this into 2 components:
     1 section as the intro bar
@@ -167,6 +173,7 @@ function Navbar(props: Props) {
                   my: 2, 
                   display: 'block',
                   margin: 'auto 1rem',
+                  fontSize: '1.3rem',
                  }}
               >
                 {page}
