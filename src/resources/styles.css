@@ -172,6 +172,7 @@ header {
 .intro_wrapper h1 {
   display: flex;
   color: #fff;
+  font-weight: bolder;
 }
 
 /*====================
