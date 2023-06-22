@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import { cyan, blueGrey } from '@mui/material/colors';
+import { grey, lightBlue } from '@mui/material/colors';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 
@@ -27,10 +27,10 @@ interface Props {
 const pageTheme = createTheme({
   palette: {
     primary: {
-      main: blueGrey[400],
+      main: grey[100],
     },
     secondary: {
-        main: cyan[50],
+        main: lightBlue[900],
     },
   },
   typography: {
@@ -47,7 +47,8 @@ const StyledButton = styled(Button)`
   })};
 
   &:hover {
-    background-color: ${theme.palette.secondary.main};
+    background-color: ${theme.palette.primary.main};
+    color: ${theme.palette.secondary.main};
   }
   `}
 `;
@@ -161,7 +162,7 @@ function Navbar(props: Props) {
               display: { xs: 'none', md: 'flex' },
               justifyContent: 'flex-end',
               '&hover': {
-                backgroundColor: 'secondary',
+                backgroundColor: 'primary',
               }, 
             }}>
             {pages.map((page) => (
@@ -169,6 +170,7 @@ function Navbar(props: Props) {
               <StyledButton 
                 key={page}
                 onClick={handleCloseNavMenu}
+                variant='outlined'
                 sx={{ 
                   my: 2, 
                   display: 'block',
