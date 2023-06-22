@@ -213,13 +213,14 @@ header {
   background-repeat: no-repeat;
 }
 
-.prlx_logo {
+/* .prlx_logo {
   display: flex;
+  position: fixed;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  z-index: 5;
-}
+  height: 100%;
+  width: 100%;
+} */
 
 .message-wrapper {
   display: flex;

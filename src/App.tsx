@@ -1,7 +1,7 @@
 import React from 'react';
 import './resources/styles.css';
 // import Header from './components/Header_Footer/Header';
-import Navbar from './components/Header_Footer/Navbar';
+import Navbar from './components/Header_Footer/Navbar/Navbar';
 import Featured from './components/Featured/index';
 import Intro from './components/Intro/Intro';
 import Customers from './components/Customers/Customers';
