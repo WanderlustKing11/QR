@@ -29,7 +29,8 @@ interface Props {
 const pageTheme = createTheme({
   palette: {
     primary: {
-      main: grey[100],
+      light: grey[100],
+      main: grey[800],
     },
     secondary: {
       main: lightBlue[900],
@@ -49,7 +50,7 @@ const StyledButton = styled(Button)`
   })};
 
   &:hover {
-    background-color: ${theme.palette.primary.main};
+    background-color: ${theme.palette.primary.light};
     color: ${theme.palette.secondary.main};
   }
   `}
@@ -165,7 +166,7 @@ function Navbar(props: Props) {
                 display: { xs: 'none', md: 'flex' },
                 justifyContent: 'flex-end',
                 '&hover': {
-                  backgroundColor: 'primary',
+                  backgroundColor: 'primary.main',
                 },
               }}
             >
@@ -177,12 +178,13 @@ function Navbar(props: Props) {
                     <StyledButton
                       key={page}
                       onClick={handleCloseNavMenu}
-                      variant='outlined'
+                      variant='text'
                       sx={{
                         my: 2,
                         display: 'block',
                         margin: 'auto 1rem',
                         fontSize: '1.3rem',
+                        color: 'primary.light',
                       }}
                     >
                       {page}

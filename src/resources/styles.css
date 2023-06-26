@@ -149,6 +149,11 @@ header {
   width: auto;
 }
 
+#basic-button {
+  display: flex;
+  flex-direction: row;
+}
+
 /*====================
         FEATURED
 ======================*/

@@ -7,6 +7,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Typography from '@mui/material/Typography';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { grey, lightBlue } from '@mui/material/colors';
 
@@ -78,13 +79,14 @@ const ProjMenu = () => {
           aria-haspopup='true'
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClick}
-          variant='outlined'
+          variant='text'
           sx={{
             my: 2,
             display: 'block',
             margin: 'auto 1rem',
             fontSize: '1.3rem',
           }}
+          endIcon={<KeyboardArrowDownIcon />}
         >
           PROJECTS
         </Button>
