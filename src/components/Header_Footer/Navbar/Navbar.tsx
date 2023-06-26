@@ -19,6 +19,7 @@ import Slide from '@mui/material/Slide';
 
 import NavMenu from './NavMenu';
 import ProjMenu from './ProjMenu';
+import ServicesMenu from './ServicesMenu';
 import Logo from '../../../resources/images/qr_logo_sm.png';
 
 interface Props {
@@ -173,6 +174,8 @@ function Navbar(props: Props) {
               {pages.map((page) =>
                 page === 'projects' ? (
                   <ProjMenu key={page} />
+                ) : page === 'services' ? (
+                  <ServicesMenu key={page} />
                 ) : (
                   <ThemeProvider theme={pageTheme} key={page}>
                     <StyledButton
