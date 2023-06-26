@@ -50,6 +50,13 @@ Delete all excess font styles */
   font-weight: 600, 700, 900;
 }
 
+@font-face {
+  font-family: 'Radio_Canada';
+  src: url('./fonts/radio_canada/RadioCanada_Condensed-Regular.ttf') format('truetype'),
+       url('./fonts/radio_canada/RadioCanada_Condensed-Medium.ttf') format('truetype');
+  font-weight: 400, 500;
+}
+
 /*====================
         APP
 ======================*/
@@ -195,6 +202,11 @@ header {
   z-index: 5;
 }
 
+.footer-layer {
+  position: relative;
+  z-index: 5;
+}
+
 /* .prlx_wrapper {
   display: flex;
   justify-content: center;
@@ -326,7 +338,24 @@ div .services_wrapper:last-child {
 }
 
 /*====================
-        Footer
+        OUTRO
+======================*/
+
+.outro_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 10rem;
+  width: 100%;
+}
+
+.outro_phrase {
+  text-shadow: 3px 2px 5px #2d2d2d;
+}
+
+/*====================
+        FOOTER
 ======================*/
 
 .footer_wrapper {

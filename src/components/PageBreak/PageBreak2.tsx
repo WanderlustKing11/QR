@@ -1,5 +1,6 @@
 import React from 'react';
 import img_0222 from '../../resources/images/DJI_0222.jpg';
+import istock_img09 from '../../resources/images/istock_09.jpg';
 
 // import { Fade } from 'react-awesome-reveal';
 
@@ -10,9 +11,9 @@ const PageBreak2 = () => {
       <div
         className='prlx_img'
         style={{
-          backgroundImage: `url(${img_0222})`,
+          backgroundImage: `url(${istock_img09})`,
           backgroundSize: 'cover',
-          backgroundPositionY: '-5rem',
+          backgroundPositionX: '-10rem',
         }}
       ></div>
 

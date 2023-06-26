@@ -8,6 +8,7 @@ import Customers from './components/Customers/Customers';
 import PageBreak_1 from './components/PageBreak/PageBreak1';
 import Services from './components/Services/Services';
 import PageBreak2 from './components/PageBreak/PageBreak2';
+import Outro from './components/Header_Footer/Outro';
 import Footer from './components/Header_Footer/Footer';
 
 import CssBaseline from '@mui/material/CssBaseline';
@@ -38,7 +39,7 @@ const App: React.FC = () => {
               offset={0}
               speed={0}
               sticky={{ start: 0, end: 0.9 }}
-              factor={3}
+              factor={1}
             >
               <div>
                 <PageBreak_1 />
@@ -58,20 +59,21 @@ const App: React.FC = () => {
             {/* Parallax 2 */}
             <ParallaxLayer
               className='prlx-layer'
-              offset={1.6}
-              speed={0}
-              sticky={{ start: 1.4, end: 2.5 }}
-              factor={1}
+              offset={1}
+              speed={1}
+              sticky={{ start: 1.6, end: 2 }}
+              factor={0.3}
             >
               <PageBreak2 />
             </ParallaxLayer>
 
             <ParallaxLayer
               className='footer-layer'
-              offset={2.7}
+              offset={2}
               speed={1}
-              factor={2}
+              factor={1}
             >
+              <Outro />
               <Footer />
             </ParallaxLayer>
           </Parallax>
