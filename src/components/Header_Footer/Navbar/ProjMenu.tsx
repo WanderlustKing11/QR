@@ -107,7 +107,7 @@ const ProjMenu = () => {
           <MenuItem onClick={handleClose}>
             {/* Add link to navigate to Projects page */}
             {/* <Link to='/projects'> */}
-            <Typography variant='body1'>All Projects</Typography>
+            <Typography variant='body1' color={pageTheme.palette.primary.main}>All Projects</Typography>
             {/* </Link> */}
           </MenuItem>
           {/* Image Grid */}

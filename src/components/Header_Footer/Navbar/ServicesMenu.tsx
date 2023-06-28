@@ -34,7 +34,7 @@ const ServicesMenu = () => {
     setAnchorEl(null);
   };
 
-  const serviceTopics = ['24/7 Service', 'Installations', 'Mobile trailers Cooler / Freezer', 'Energy Management', 'Thermal Solutions'];
+  const serviceTopics = ['24/7 Service', 'Refrigeration installations & construction', 'Mobile Trailers Cooler / Freezer', 'Energy Management', 'Thermal Solution'];
 
   
   return (
@@ -74,7 +74,7 @@ const ServicesMenu = () => {
         >
           {serviceTopics.map((item) => (
             <MenuItem key={item} onClick={handleClose}>
-              <Typography textAlign='center'>{item}</Typography>
+              <Typography textAlign='center' color={pageTheme.palette.primary.main}>{item}</Typography>
             </MenuItem>
           ))}
         </Menu>

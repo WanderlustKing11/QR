@@ -59,10 +59,10 @@ const App: React.FC = () => {
             {/* Parallax 2 */}
             <ParallaxLayer
               className='prlx-layer'
-              offset={1}
+              offset={1.6}
               speed={1}
               sticky={{ start: 1.6, end: 2 }}
-              factor={0.3}
+              factor={1}
             >
               <PageBreak2 />
             </ParallaxLayer>

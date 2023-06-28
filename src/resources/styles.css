@@ -365,7 +365,7 @@ div .services_wrapper:last-child {
 
 .footer_wrapper {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex: row;
   color: #fff;
@@ -376,32 +376,30 @@ div .services_wrapper:last-child {
   box-shadow: 0px -2px 5px #1e1e1e;
 }
 
-.footer-title, .footer-links, .footer-contact {
+.footer_title, .footer_links, .footer_contact {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-}
-
-.footer-title {
-  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  margin: 0 10rem;
 }
 
-.footer-title h1 {
-  font-size: 3rem;
-  font-family: 'Quicksand';
-  font-weight: 700;
-  margin: 0;
-  align-items: start;
+.footer_title {
+  width: 50%;
 }
 
-.footer-title p {
-  font-size: 2rem;
-  font-family: 'Quicksand';
-  font-weight: 400;
-  margin: 0;
+.footer_title img {
+  width: 100%;
+}
+
+.social_media_icons .MuiIconButton-root {
+  color: hsl(200, 100%, 50%)
+}
+
+.footer_divider {
+  border: 2px solid #fff;
+  height: 70%;
+  width: 1px;
 }
 
 ul li {
